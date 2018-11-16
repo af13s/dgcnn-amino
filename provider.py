@@ -139,14 +139,70 @@ def random_scale_point_cloud(batch_data, scale_low=0.8, scale_high=1.25):
 def getDataFiles(list_filename):
   return [line.rstrip() for line in open(list_filename)]
 
-def load_h5(h5_filename):
-  f = h5py.File(h5_filename)
-  data = f['data'][:]
-  label = f['label'][:]
-  return (data, label)
+def load_h5(gen):
 
-def loadDataFile(filename):
-  return load_h5(filename)
+  # f = h5py.File(h5_filename)
+  # data = f['data'][:]
+  # label = f['label'][:]
+
+  return next(gen)
+
+def myDataGenerator(numSamples=2048):
+  dataPath = '/media/cfarzaneh/CamResearch/1.label/'
+  filelist = sorted(os.listdir(dataPath))
+  while True:
+    samples = []
+    labels = []
+    for file in filelist:
+      print(file)
+      f = open(dataPath+file)
+      aminoAcids = []
+      coords = []
+
+      for line in f:
+        line = line.split('\t')
+        aminoAcid = line.pop(0)
+        line.pop()
+
+        aminoAcids.append(aminoAcid)
+
+        atoms = [x[0] for x in [x.split(',') for x in line]]
+        line = [x[5:] for x in [x.split(',') for x in line]]
+        line = np.array(line)
+
+        coords.append(line)
+
+      for i,x in enumerate(coords):
+        j = 0
+        while x.shape[0] != numSamples:
+          x = np.append(x,[x[j]],axis=0)
+          j+=1
+          coords[i] = x
+
+      samples.extend(coords)
+      classes=['ALA','CYS','ASP','GLU','PHE','GLY','HIS','ILE','LYS','LEU','MET','ASN','PRO','GLN','ARG','SER','THR','VAL','TRP','TYR']
+      aminoAcids = [classes.index(x) for x in aminoAcids]
+      labels.extend(aminoAcids)
+
+      if len(samples) >= numSamples:
+        while len(samples) != numSamples:
+          del samples[-1]
+          del labels[-1]
+
+        samples = np.stack(samples, axis=0)
+        print(samples.shape)
+        print(len(labels))
+
+        labels = np.array(labels)
+        labels = np.expand_dims(labels, axis=1)
+
+        yield (samples,labels)
+
+        samples = []
+        labels = []
+
+def loadDataFile(gen):
+  return load_h5(gen)
 
 
 def load_h5_data_label_seg(h5_filename):
