@@ -1,0 +1,894 @@
+(tensorflow) cfarzaneh@learn:~/Desktop/dgcnn-amino$ python3 train.py 
+2018-11-15 20:21:06.823066: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-11-15 20:21:06.963065: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 0 with properties: 
+name: Quadro GP100 major: 6 minor: 0 memoryClockRate(GHz): 1.4425
+pciBusID: 0000:b3:00.0
+totalMemory: 15.89GiB freeMemory: 14.55GiB
+2018-11-15 20:21:06.963091: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1490] Adding visible gpu devices: 0
+2018-11-15 20:21:07.162791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-11-15 20:21:07.162824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977]      0 
+2018-11-15 20:21:07.162828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 0:   N 
+2018-11-15 20:21:07.163003: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14096 MB memory) -> physical GPU (device: 0, name: Quadro GP100, pci bus id: 0000:b3:00.0, compute capability: 6.0)
+Tensor("Placeholder_2:0", shape=(), dtype=bool, device=/device:GPU:0)
+WARNING:tensorflow:From /home/cfarzaneh/Desktop/dgcnn-amino/utils/tf_util.py:655: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/cfarzaneh/Desktop/dgcnn-amino/models/transform_nets.py:27: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:Variable += will be deprecated. Use variable.assign_add if you want assignment to the variable value or 'x = x + y' if you want a new python Tensor object.
+2018-11-15 20:21:10.876760: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1490] Adding visible gpu devices: 0
+2018-11-15 20:21:10.876822: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-11-15 20:21:10.876826: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977]      0 
+2018-11-15 20:21:10.876830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 0:   N 
+2018-11-15 20:21:10.877000: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14096 MB memory) -> physical GPU (device: 0, name: Quadro GP100, pci bus id: 0000:b3:00.0, compute capability: 6.0)
+**** EPOCH 000 ****
+----0-----
+
+pdb1a1xA.txt
+pdb1a2pC.txt
+pdb1a3aC.txt
+pdb1a62A.txt
+pdb1a8dA.txt
+pdb1a8lA.txt
+pdb1a92B.txt
+pdb1a9xF.txt
+pdb1abaA.txt
+pdb1acfA.txt
+pdb1ae9A.txt
+pdb1agjA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:32<00:00,  2.06it/s]
+mean loss: 3.836860
+accuracy: 0.082520
+----1-----
+
+pdb1ah7A.txt
+pdb1ahoA.txt
+pdb1akoA.txt
+pdb1al3A.txt
+pdb1aluA.txt
+pdb1alyA.txt
+pdb1amtC.txt
+pdb1amuB.txt
+pdb1amxA.txt
+pdb1aocB.txt
+pdb1aohA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 3.606372
+accuracy: 0.071777
+----2-----
+
+pdb1aolA.txt
+pdb1apyD.txt
+pdb1aqzB.txt
+pdb1at0A.txt
+pdb1atgA.txt
+pdb1atzB.txt
+pdb1ayoB.txt
+pdb1azoA.txt
+pdb1b0bA.txt
+pdb1b0uA.txt
+pdb1b25C.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.08it/s]
+mean loss: 3.451867
+accuracy: 0.094238
+----3-----
+
+pdb1b4fG.txt
+pdb1b5eA.txt
+pdb1b5qA.txt
+pdb1b63A.txt
+pdb1b6gA.txt
+pdb1b9hA.txt
+pdb1b9mB.txt
+pdb1b9wA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.08it/s]
+mean loss: 3.398574
+accuracy: 0.086914
+----4-----
+
+pdb1bazA.txt
+pdb1bb1A.txt
+pdb1bdbA.txt
+pdb1beaA.txt
+pdb1bf2A.txt
+pdb1bg6A.txt
+pdb1bgfA.txt
+pdb1bheA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.353942
+accuracy: 0.090820
+----5-----
+
+pdb1bkrA.txt
+pdb1blxB.txt
+pdb1bm8A.txt
+pdb1bm9B.txt
+pdb1bquB.txt
+pdb1brtA.txt
+pdb1bs0A.txt
+pdb1bteA.txt
+pdb1btkB.txt
+pdb1btnA.txt
+pdb1bu8A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.344912
+accuracy: 0.089844
+----6-----
+
+pdb1buoA.txt
+pdb1bx7A.txt
+pdb1bxyB.txt
+pdb1byfA.txt
+pdb1byiA.txt
+pdb1byrA.txt
+pdb1c0pA.txt
+pdb1c1dA.txt
+pdb1c1kA.txt
+pdb1c1yB.txt
+pdb1c3cA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 3.278930
+accuracy: 0.114746
+----7-----
+
+pdb1c3pA.txt
+pdb1c4qD.txt
+pdb1c52A.txt
+pdb1c5eB.txt
+pdb1c75A.txt
+pdb1c7kA.txt
+pdb1c7sA.txt
+pdb1c8uA.txt
+pdb1c96A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.269890
+accuracy: 0.112793
+----8-----
+
+pdb1cb8A.txt
+pdb1cc8A.txt
+pdb1ccwC.txt
+pdb1cczA.txt
+pdb1cdcA.txt
+pdb1ceoA.txt
+pdb1cfbA.txt
+pdb1chdA.txt
+pdb1chmB.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.08it/s]
+mean loss: 3.292645
+accuracy: 0.093262
+----9-----
+
+pdb1ci4A.txt
+pdb1ci9B.txt
+pdb1cjwA.txt
+pdb1clvI.txt
+pdb1cmcA.txt
+pdb1cojA.txt
+pdb1cozB.txt
+pdb1cpqA.txt
+pdb1cq3B.txt
+pdb1cq4A.txt
+pdb1cruB.txt
+pdb1cseI.txt
+pdb1cshA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.09it/s]
+mean loss: 3.261974
+accuracy: 0.104980
+----10-----
+
+pdb1ct9A.txt
+pdb1ctfA.txt
+pdb1cukA.txt
+pdb1cunA.txt
+pdb1cv8A.txt
+pdb1cxqA.txt
+pdb1cxyA.txt
+pdb1cy5A.txt
+pdb1czyC.txt
+pdb1d0dA.txt
+pdb1d0qA.txt
+pdb1d1qA.txt
+pdb1d2nA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.05it/s]
+mean loss: 3.270771
+accuracy: 0.102051
+----11-----
+
+pdb1d2oA.txt
+pdb1d2sA.txt
+pdb1d2tA.txt
+pdb1d2zA.txt
+pdb1d3bB.txt
+pdb1d3yA.txt
+pdb1d4oA.txt
+pdb1d4tA.txt
+pdb1d5tA.txt
+pdb1d8hB.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 3.239697
+accuracy: 0.118164
+----12-----
+
+pdb1d8wD.txt
+pdb1d9cB.txt
+pdb1dbwB.txt
+pdb1dcsA.txt
+pdb1dd9A.txt
+pdb1dekA.txt
+pdb1dg6A.txt
+pdb1dgwA.txt
+pdb1dj0A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.10it/s]
+mean loss: 3.240755
+accuracy: 0.118652
+----13-----
+
+pdb1dj8D.txt
+pdb1dk8A.txt
+pdb1dm9A.txt
+pdb1dmgA.txt
+pdb1dowA.txt
+pdb1dp4A.txt
+pdb1dpgB.txt
+pdb1dpjB.txt
+pdb1dqgA.txt
+pdb1dqpB.txt
+pdb1ds1A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.09it/s]
+mean loss: 3.194429
+accuracy: 0.128418
+----14-----
+
+pdb1dtdB.txt
+pdb1dunA.txt
+pdb1dusA.txt
+pdb1dvoA.txt
+pdb1dwkE.txt
+pdb1dxgB.txt
+pdb1dxyA.txt
+pdb1dy5B.txt
+pdb1dypA.txt
+pdb1dz3A.txt
+pdb1dzfA.txt
+pdb1e0bB.txt
+pdb1e29A.txt
+pdb1e2kB.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 3.246897
+accuracy: 0.107910
+----15-----
+
+pdb1e2wA.txt
+pdb1e58A.txt
+pdb1e5kA.txt
+pdb1e6uA.txt
+pdb1e7lA.txt
+pdb1e8cA.txt
+pdb1e9gA.txt
+pdb1eajB.txt
+pdb1eaqB.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.01it/s]
+mean loss: 3.201569
+accuracy: 0.130859
+----16-----
+
+pdb1earA.txt
+pdb1eayD.txt
+pdb1eb6A.txt
+pdb1ecfA.txt
+pdb1ecsA.txt
+pdb1eejA.txt
+pdb1eerA.txt
+pdb1eexA.txt
+pdb1ef1C.txt
+pdb1ef8A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.09it/s]
+mean loss: 3.201608
+accuracy: 0.120117
+----17-----
+
+pdb1efdN.txt
+pdb1ei5A.txt
+pdb1ej8A.txt
+pdb1ekeA.txt
+pdb1ekjF.txt
+pdb1ekqA.txt
+pdb1el6A.txt
+pdb1eljA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:31<00:00,  2.06it/s]
+mean loss: 3.174956
+accuracy: 0.145996
+----18-----
+
+pdb1elkB.txt
+pdb1eluA.txt
+pdb1eokA.txt
+pdb1eq2I.txt
+pdb1es5A.txt
+pdb1es9A.txt
+pdb1et1B.txt
+pdb1eu1A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.01it/s]
+mean loss: 3.174592
+accuracy: 0.143555
+----19-----
+
+pdb1eu8A.txt
+pdb1euhD.txt
+pdb1euvA.txt
+pdb1euwA.txt
+pdb1evlD.txt
+pdb1evyA.txt
+pdb1ew0A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.165365
+accuracy: 0.139160
+----20-----
+
+pdb1ew4A.txt
+pdb1ewfA.txt
+pdb1extA.txt
+pdb1eyvB.txt
+pdb1ez3B.txt
+pdb1ezgB.txt
+pdb1eziB.txt
+pdb1ezwA.txt
+pdb1f00I.txt
+pdb1f0kB.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:31<00:00,  2.00it/s]
+mean loss: 3.152806
+accuracy: 0.130859
+----21-----
+
+pdb1f0lB.txt
+pdb1f0xB.txt
+pdb1f1eA.txt
+pdb1f1mC.txt
+pdb1f2tA.txt
+pdb1f32A.txt
+pdb1f39B.txt
+pdb1f3uC.txt
+pdb1f3vA.txt
+pdb1f46B.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.127089
+accuracy: 0.165039
+----22-----
+
+pdb1f5nA.txt
+pdb1f5vB.txt
+pdb1f86A.txt
+pdb1f8eA.txt
+pdb1f9vA.txt
+pdb1faoA.txt
+pdb1fc3B.txt
+pdb1fc6A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 3.157061
+accuracy: 0.151855
+----23-----
+
+pdb1fcqA.txt
+pdb1fcyA.txt
+pdb1fg7A.txt
+pdb1fj2B.txt
+pdb1fkmA.txt
+pdb1fltY.txt
+pdb1fm0D.txt
+pdb1fmjB.txt
+pdb1fn9A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 3.141199
+accuracy: 0.165039
+----24-----
+
+pdb1fnnB.txt
+pdb1fo8A.txt
+pdb1fobA.txt
+pdb1fp2A.txt
+pdb1fpoB.txt
+pdb1fpzC.txt
+pdb1fs1C.txt
+pdb1fsgC.txt
+pdb1ft5A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.04it/s]
+mean loss: 3.115047
+accuracy: 0.169922
+----25-----
+
+pdb1ftrD.txt
+pdb1fv1F.txt
+pdb1fviA.txt
+pdb1fyeA.txt
+pdb1g0sA.txt
+pdb1g12A.txt
+pdb1g1sD.txt
+pdb1g2nA.txt
+pdb1g2rA.txt
+pdb1g2yC.txt
+pdb1g3kA.txt
+pdb1g3pA.txt
+pdb1g3qA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.02it/s]
+mean loss: 3.094202
+accuracy: 0.180664
+----26-----
+
+pdb1g55A.txt
+pdb1g5aA.txt
+pdb1g5hA.txt
+pdb1g5tA.txt
+pdb1g60B.txt
+pdb1g61A.txt
+pdb1g66A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.079588
+accuracy: 0.183594
+----27-----
+
+pdb1g6gA.txt
+pdb1g6xA.txt
+pdb1g8aA.txt
+pdb1g8eB.txt
+pdb1g8kG.txt
+pdb1g8mB.txt
+pdb1ga8A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.055281
+accuracy: 0.195312
+----28-----
+
+pdb1gakA.txt
+pdb1gciA.txt
+pdb1gcqC.txt
+pdb1gdeB.txt
+pdb1gheA.txt
+pdb1gj7A.txt
+pdb1gk6A.txt
+pdb1gk9A.txt
+pdb1gkmA.txt
+pdb1gl2C.txt
+pdb1gl4A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.021036
+accuracy: 0.218262
+----29-----
+
+pdb1gmiA.txt
+pdb1gmuA.txt
+pdb1gmxA.txt
+pdb1gnlB.txt
+pdb1gnyA.txt
+pdb1go3F.txt
+pdb1goiB.txt
+pdb1gp0A.txt
+pdb1gp6A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.08it/s]
+mean loss: 3.042583
+accuracy: 0.211914
+----30-----
+
+pdb1gpjA.txt
+pdb1gppA.txt
+pdb1gprA.txt
+pdb1gqeA.txt
+pdb1gqiB.txt
+pdb1gr0A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.09it/s]
+mean loss: 3.001187
+accuracy: 0.216309
+----31-----
+
+pdb1gs5A.txt
+pdb1gs9A.txt
+pdb1gsaA.txt
+pdb1gt1A.txt
+pdb1gttC.txt
+pdb1gtvA.txt
+pdb1gu2B.txt
+pdb1gu7A.txt
+pdb1gu9F.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.10it/s]
+mean loss: 3.001542
+accuracy: 0.243164
+----32-----
+
+pdb1guiA.txt
+pdb1gutE.txt
+pdb1gv9A.txt
+pdb1gveB.txt
+pdb1gvfB.txt
+pdb1gvnB.txt
+pdb1gvpA.txt
+pdb1gweA.txt
+pdb1gwmA.txt
+pdb1gxmB.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.01it/s]
+mean loss: 3.039747
+accuracy: 0.201660
+----33-----
+
+pdb1gxrA.txt
+pdb1gxuA.txt
+pdb1gxyA.txt
+pdb1gy7B.txt
+pdb1gyxA.txt
+pdb1h12A.txt
+pdb1h16A.txt
+pdb1h2bA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.026399
+accuracy: 0.214844
+----34-----
+
+pdb1h2eA.txt
+pdb1h2vZ.txt
+pdb1h32A.txt
+pdb1h3fB.txt
+pdb1h4xB.txt
+pdb1h6hA.txt
+pdb1h6kC.txt
+pdb1h70A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 3.000257
+accuracy: 0.242188
+----35-----
+
+pdb1h72C.txt
+pdb1h7sA.txt
+pdb1h80B.txt
+pdb1h8pB.txt
+pdb1h8uB.txt
+pdb1h97B.txt
+pdb1h99A.txt
+pdb1hbkA.txt
+pdb1hdhB.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.09it/s]
+mean loss: 2.981178
+accuracy: 0.219238
+----36-----
+
+pdb1hdkA.txt
+pdb1hdoA.txt
+pdb1he1B.txt
+pdb1hfeT.txt
+pdb1hh8A.txt
+pdb1hm9B.txt
+pdb1hn0A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 2.945292
+accuracy: 0.245117
+----37-----
+
+pdb1hp1A.txt
+pdb1hq0A.txt
+pdb1hqsA.txt
+pdb1hruA.txt
+pdb1ht6A.txt
+pdb1htrP.txt
+pdb1htwA.txt
+pdb1huwA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 2.924468
+accuracy: 0.261230
+----38-----
+
+pdb1hx6B.txt
+pdb1hxiA.txt
+pdb1hxnA.txt
+pdb1hxrB.txt
+pdb1hyeA.txt
+pdb1hyoA.txt
+pdb1hypA.txt
+pdb1hz4A.txt
+pdb1hz6A.txt
+pdb1hztA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.10it/s]
+mean loss: 2.952675
+accuracy: 0.240723
+----39-----
+
+pdb1i0rA.txt
+pdb1i12B.txt
+pdb1i1qA.txt
+pdb1i1wA.txt
+pdb1i24A.txt
+pdb1i27A.txt
+pdb1i2tA.txt
+pdb1i4jB.txt
+pdb1i4uB.txt
+pdb1i58A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 2.943281
+accuracy: 0.253418
+----40-----
+
+pdb1i60A.txt
+pdb1i71A.txt
+pdb1i7wD.txt
+pdb1i88A.txt
+pdb1i8aA.txt
+pdb1i9zA.txt
+pdb1ia9B.txt
+pdb1iapA.txt
+pdb1ibyD.txt
+pdb1id0A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 2.962784
+accuracy: 0.249023
+----41-----
+
+pdb1idpC.txt
+pdb1ifrA.txt
+pdb1ig0A.txt
+pdb1igqC.txt
+pdb1ii5A.txt
+pdb1iibB.txt
+pdb1ijyA.txt
+pdb1iktA.txt
+pdb1in4A.txt
+pdb1inlD.txt
+pdb1io0A.txt
+pdb1io1A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 2.917260
+accuracy: 0.259277
+----42-----
+
+pdb1io7A.txt
+pdb1iomA.txt
+pdb1iooA.txt
+pdb1iq4A.txt
+pdb1iq5B.txt
+pdb1iqqA.txt
+pdb1iqzA.txt
+pdb1irqB.txt
+pdb1isuA.txt
+pdb1it2B.txt
+pdb1itvB.txt
+pdb1iujA.txt
+pdb1iuqA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 2.950446
+accuracy: 0.244141
+----43-----
+
+pdb1ix9B.txt
+pdb1ixhA.txt
+pdb1ixlA.txt
+pdb1iz6C.txt
+pdb1izcA.txt
+pdb1izmA.txt
+pdb1j0pA.txt
+pdb1j1bA.txt
+pdb1j1iA.txt
+pdb1j24A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 2.887599
+accuracy: 0.261230
+----44-----
+
+pdb1j27A.txt
+pdb1j2jB.txt
+pdb1j2rA.txt
+pdb1j30B.txt
+pdb1j34B.txt
+pdb1j3aA.txt
+pdb1j3mB.txt
+pdb1j3wB.txt
+pdb1j5uA.txt
+pdb1j5wB.txt
+pdb1j77A.txt
+pdb1j7xA.txt
+pdb1j83A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.08it/s]
+mean loss: 2.874423
+accuracy: 0.280762
+----45-----
+
+pdb1j8bA.txt
+pdb1j8uA.txt
+pdb1j98A.txt
+pdb1jayA.txt
+pdb1jb3A.txt
+pdb1jbeA.txt
+pdb1jbwA.txt
+pdb1jcdA.txt
+pdb1jdcA.txt
+pdb1jdhB.txt
+pdb1jdpH.txt
+pdb1jdwA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.06it/s]
+mean loss: 2.859032
+accuracy: 0.278809
+----46-----
+
+pdb1je5B.txt
+pdb1jekA.txt
+pdb1jetA.txt
+pdb1jf3A.txt
+pdb1jf8A.txt
+pdb1jfbA.txt
+pdb1jfuB.txt
+pdb1jg1A.txt
+pdb1jh6B.txt
+pdb1jhgA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.08it/s]
+mean loss: 2.893739
+accuracy: 0.276367
+----47-----
+
+pdb1jhjA.txt
+pdb1jhsA.txt
+pdb1ji1A.txt
+pdb1ji7C.txt
+pdb1jiwI.txt
+pdb1jixA.txt
+pdb1jkeB.txt
+pdb1jkgA.txt
+pdb1jl1A.txt
+pdb1jm1A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.10it/s]
+mean loss: 2.869338
+accuracy: 0.272949
+----48-----
+
+pdb1jmkC.txt
+pdb1jmvA.txt
+pdb1jndA.txt
+pdb1jniA.txt
+pdb1jnrA.txt
+pdb1jo0B.txt
+pdb1josA.txt
+pdb1jovA.txt
+pdb1jp4A.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.07it/s]
+mean loss: 2.858664
+accuracy: 0.288086
+----49-----
+
+pdb1jr2B.txt
+pdb1jr7A.txt
+pdb1js1Y.txt
+pdb1jtvA.txt
+pdb1ju2A.txt
+pdb1juhD.txt
+pdb1juvA.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.08it/s]
+mean loss: 2.826501
+accuracy: 0.302246
+----50-----
+
+pdb1jw9B.txt
+pdb1jx6A.txt
+pdb1jy1A.txt
+pdb1jy2Q.txt
+pdb1jyaB.txt
+pdb1jyeA.txt
+pdb1jyhA.txt
+pdb1jykA.txt
+pdb1jyoD.txt
+pdb1jz8C.txt
+(2048, 2048, 3)
+2048
+100%|█████████████████████████████████████████████████████████████████████████████████| 64/64 [00:30<00:00,  2.09it/s]
+mean loss: 2.843940
+accuracy: 0.280273
+
+Evaluating
+----0-----
+Traceback (most recent call last):
+  File "train.py", line 277, in <module>
+    train()
+  File "train.py", line 167, in train
+    eval_one_epoch(sess, ops, test_writer)
+  File "train.py", line 243, in eval_one_epoch
+    current_data, current_label = provider.loadDataFile(TEST_FILES[fn])
+  File "/home/cfarzaneh/Desktop/dgcnn-amino/provider.py", line 205, in loadDataFile
+    return load_h5(gen)
+  File "/home/cfarzaneh/Desktop/dgcnn-amino/provider.py", line 148, in load_h5
+    return next(gen)
+TypeError: 'str' object is not an iterator
+
